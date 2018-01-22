@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The wall</title>
+</head>
+
+<body>
+    <h1>Welcome {{session['first_name'] + ' ' + session['last_name']}}</h1>
+
+    <a href="/logoff">Log off ...</a>
+    <h2>Post a Message</h2>
+    <textarea name="message"></textarea>
+    <input type="submit" value="Post a message">
+
+    <div>
+        {% for message in messages:%}
+        <h3>{{message['message_creator_name']}} - {{message['created_at']}}</h3>
+        <div>
+            {{message['message']}}
+            <div>
+                {% for comment in message['comments']:%}
+                <b>{{comment['comment_creator_name']}} - {{comment['created_at']}}</b>
+                <div>{{comment['comment']}}</div>
+                {%endfor%}
+                <h3>Post a comment </h3>
+            </div>
+        </div>
+        {%endfor%}
+    </div>
+</body>
+
+</html>

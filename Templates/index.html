@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The Wall</title>
+</head>
+<body>
+
+
+    <!-- login form -->
+    <h1>Login</h1>
+
+    <form action='process_login' method ='POST'>
+        <input type="email" placeholder="Email"  name="email">
+        <input type="password" placeholder="Password"  name="password">
+        <input type="submit" value='login'>
+    </form> 
+    <!-- registration form -->
+        <h1>Register</h1>
+
+    <form action="process_register" method ='POST'>
+        <input type="text" placeholder="First Name"  name="first_name">
+        <input type="text" placeholder="Last Name "  name="last_name">
+        <input type="email" placeholder="Email"  name="email">
+        <input type="password" placeholder="Password"  name="password">
+        <input type="password" placeholder="Confirm Password"  name="passwd_conf">
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>
